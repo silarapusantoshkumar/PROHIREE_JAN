@@ -19,16 +19,16 @@ const MyResume = () => {
   // };
  
 
-  const yesButton = () => {
-    setCurrentcompany(true);
-    reducer.currentcompany = {};
-  };
+  // const yesButton = () => {
+  //   setCurrentcompany(true);
+  //   reducer.currentcompany = {};
+  // };
 
 
 
-  const NoButton = () => {
-    setCurrentcompany(false);
-  };
+  // const NoButton = () => {
+  //   setCurrentcompany(false);
+  // };
 
 
 
