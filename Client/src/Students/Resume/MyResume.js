@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import axios from 'axios'
 import apiList from "../../lib/apiList";
 import ChipInput from "material-ui-chip-input";
-import PersonalDetails from './personalDetails'
 import { Link } from "react-router-dom";
 import moment from "moment";
 import FileUploadInput from "./FileUploadInput";
@@ -15,9 +14,9 @@ const MyResume = () => {
 
   const [currentcompany, setCurrentcompany] = useState(false);
 
-  const NoHandling = (e) => {
-    setReducer({ ...reducer, currentcompany: e.target.value });
-  };
+  // const NoHandling = (e) => {
+  //   setReducer({ ...reducer, currentcompany: e.target.value });
+  // };
  
 
   const yesButton = () => {
@@ -239,14 +238,20 @@ const getData = () => {
                 <div className="row">
                   <div className="col-lg-2 ">
                     <div className="canditate-des">
-                      <a href="#">
+                      <a>
                         <img
                           className="resume_img img-responsive"
                           alt=""
                           src="images/girl_avtar.png"
                         />
-                        <i class="fas fa-camera img_pencil"></i>
-                      </a>
+                        <form>
+                        <input type="file" id="imageUpload"/>
+                        <label for="imageUplaod"><i class="fas fa-camera img_pencil">
+                        </i></label>
+                        </form>
+                         </a>
+                        
+                     
                     </div>
                   </div>
 
@@ -768,7 +773,7 @@ const getData = () => {
                                   />
                                 </div>
                               </div>
-                              <div className="col-lg-12">
+                              {/* <div className="col-lg-12">
                                 <label> Is This Your Current Company ?</label>
                                 <div className="form-group">
                                   <div className="form-check form-check-inline">
@@ -780,8 +785,8 @@ const getData = () => {
                                       id="inlineRadio1"
                                     
                                       value="No"
-                                      onChange={(e)=>NoHandling(e)}
-                                       onClick={() => NoButton()}
+                                      // onChange={(e)=>NoHandling(e)}
+                                      //  onClick={() => NoButton()}
                                     />
                                     <label
                                       className="form-check-label"
@@ -810,9 +815,9 @@ const getData = () => {
                                     </label>
                                   </div>
                                 </div>
-                              </div>
+                              </div> */}
                           <div>
-                          {currentcompany ? (
+                          {/* {currentcompany ? (
 
                                 <div className="row container">
                                 <div className=" col-lg-12 col-md-12">
@@ -829,7 +834,7 @@ const getData = () => {
                                   </div>
                                 </div>
                                 </div>
-                          ):(
+                          ):( */}
                             <div className="row container">
                               <div className=" col-lg-6 col-md-6">
                                 <div className="form-group">
@@ -857,7 +862,8 @@ const getData = () => {
                                   />
                                 </div>
                               </div>
-                            </div>)}
+                            </div>
+                            {/* )} */}
                           </div>
 
                               <div className="col-lg-12">
